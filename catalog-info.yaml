@@ -19,6 +19,7 @@ metadata:
     flowsource/github-repo-owner: ShreyasiGhoshCog
     flowsource/github-repo-name: trizetto_reo_test
     flowsource/azure-devops-project-key: SPE - Flowsource-Implementation
+    # add the url as docs comes from github folder, otherwise default dir:. for local repo /docs folder
     backstage.io/techdocs-ref: url:https://github.com/ShreyasiGhoshCog/trizetto_reo_test/tree/main
     # cognizant/checkmarx-project-id: CAC_automationenginewindows_v4.3.1-latest
     # flowsource/sonarqube-project-key: 
