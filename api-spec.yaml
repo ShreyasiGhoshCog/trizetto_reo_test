@@ -1,0 +1,237 @@
+# sample api swaggar file
+openapi: "3.0.0"
+info:
+  title: Online Payment API
+  description: API for managing online payments and transactions
+  version: "1.0.0"
+  contact:
+    name: Platform Team
+    email: platform@cognizant.com
+
+servers:
+  - url: https://api.online-payment.com/v1
+    description: Production
+  - url: https://api-dev.online-payment.com/v1
+    description: Development
+
+tags:
+  - name: Payments
+    description: Payment operations
+  - name: Transactions
+    description: Transaction operations
+  - name: Customers
+    description: Customer operations
+
+paths:
+  /payments:
+    get:
+      tags:
+        - Payments
+      summary: Get all payments
+      description: Returns list of all payments
+      security:
+        - bearerAuth: []
+      parameters:
+        - name: status
+          in: query
+          description: Filter by payment status
+          required: false
+          schema:
+            type: string
+            enum: [pending, completed, failed]
+        - name: page
+          in: query
+          required: false
+          schema:
+            type: integer
+            default: 1
+      responses:
+        '200':
+          description: Success
+          content:
+            application/json:
+              schema:
+                type: array
+                items:
+                  $ref: '#/components/schemas/Payment'
+        '401':
+          description: Unauthorized
+        '500':
+          description: Internal Server Error
+
+    post:
+      tags:
+        - Payments
+      summary: Create a new payment
+      description: Authorise and create a new payment
+      security:
+        - bearerAuth: []
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/CreatePaymentRequest'
+      responses:
+        '201':
+          description: Payment created successfully
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Payment'
+        '400':
+          description: Bad Request
+        '401':
+          description: Unauthorized
+
+  /payments/{paymentId}:
+    get:
+      tags:
+        - Payments
+      summary: Get payment by ID
+      security:
+        - bearerAuth: []
+      parameters:
+        - name: paymentId
+          in: path
+          required: true
+          schema:
+            type: string
+      responses:
+        '200':
+          description: Success
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Payment'
+        '404':
+          description: Payment not found
+
+    delete:
+      tags:
+        - Payments
+      summary: Cancel a payment
+      security:
+        - bearerAuth: []
+      parameters:
+        - name: paymentId
+          in: path
+          required: true
+          schema:
+            type: string
+      responses:
+        '200':
+          description: Payment cancelled
+        '404':
+          description: Payment not found
+
+  /transactions:
+    get:
+      tags:
+        - Transactions
+      summary: Get all transactions
+      security:
+        - bearerAuth: []
+      responses:
+        '200':
+          description: Success
+          content:
+            application/json:
+              schema:
+                type: array
+                items:
+                  $ref: '#/components/schemas/Transaction'
+
+  /customers/{customerId}/payments:
+    get:
+      tags:
+        - Customers
+      summary: Get payments for a customer
+      security:
+        - bearerAuth: []
+      parameters:
+        - name: customerId
+          in: path
+          required: true
+          schema:
+            type: string
+      responses:
+        '200':
+          description: Success
+          content:
+            application/json:
+              schema:
+                type: array
+                items:
+                  $ref: '#/components/schemas/Payment'
+
+components:
+  securitySchemes:
+    bearerAuth:
+      type: http
+      scheme: bearer
+      bearerFormat: JWT
+
+  schemas:
+    Payment:
+      type: object
+      properties:
+        id:
+          type: string
+          example: "PAY-12345"
+        amount:
+          type: number
+          example: 150.00
+        currency:
+          type: string
+          example: "USD"
+        status:
+          type: string
+          enum: [pending, completed, failed]
+          example: "completed"
+        customerId:
+          type: string
+          example: "CUST-001"
+        createdAt:
+          type: string
+          format: date-time
+          example: "2026-05-28T10:00:00Z"
+
+    CreatePaymentRequest:
+      type: object
+      required:
+        - amount
+        - currency
+        - customerId
+      properties:
+        amount:
+          type: number
+          example: 150.00
+        currency:
+          type: string
+          example: "USD"
+        customerId:
+          type: string
+          example: "CUST-001"
+        description:
+          type: string
+          example: "Monthly subscription payment"
+
+    Transaction:
+      type: object
+      properties:
+        id:
+          type: string
+          example: "TXN-99999"
+        paymentId:
+          type: string
+          example: "PAY-12345"
+        amount:
+          type: number
+          example: 150.00
+        timestamp:
+          type: string
+          format: date-time
+        status:
+          type: string
+          example: "success"
