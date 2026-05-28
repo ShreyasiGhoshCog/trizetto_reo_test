@@ -1,8 +1,8 @@
 apiVersion: backstage.io/v1alpha1
 kind: Component
 metadata:
-  name: "Online-Payment-App"
-  appid: online-payment-app
+  name: "TriZetto-Healthcare-App"
+  appid: TriZetto-Healthcare-App
   description: |
     The customer authorises payment via an online form allowing the business to automatically collect the funds when due. The business' bank and the customer's bank communicate and action the payment request when the payment is due, ensuring the correct amount is debited from the customer and credited to the business.
   links:
@@ -18,46 +18,15 @@ metadata:
     flowsource/durationInDays: '180'
     flowsource/github-repo-owner: ShreyasiGhoshCog
     flowsource/github-repo-name: trizetto_reo_test
-    # flowsource/github-repo-name: Test_repo
+
+
     flowsource/azure-devops-project-key: SPE - Flowsource-Implementation
     # add the url as docs comes from github folder, otherwise default dir:. for local repo /docs folder
     backstage.io/techdocs-ref: url:https://github.com/ShreyasiGhoshCog/trizetto_reo_test/tree/main
-    # cognizant/checkmarx-project-id: CAC_automationenginewindows_v4.3.1-latest
-    # flowsource/sonarqube-project-key: 
-    # flowsource/azure-pipelines: Infra_Automation
-    # flowsource/azure-project-name: SPE - Flowsource-Implementation
-    # flowsource/azure-repo-name: shreyasi_internal_repo_poc
+
 
 
     
-    flowsource/dora-cicd-tool: jenkins
-    flowsource/dora-scm-tool: github
-    flowsource/dora-alm-tool: jira
-    flowsource/dora-itsm-tool: service-now
-    flowsource/dora-observability-platform: datadog
-    flowsource/servicenow-configuration-item: ANNIE-IBM
-
-    # NEW: This is where your CI sys_id goes
-    # servicenow.com/incident-table: "incident"
-    # servicenow.com/incident-filter: "cmdb_ci=b4fd7c8437201000deeabfc8bcbe5dc1"
-
-
-    
-    flowsource/jenkins-pipelines: demo,demo-failure
-    flowsource/jenkins-pipelines-trigger: demo,demo-failure
-    # flowsource/checkmarx-project-id: dummy
-
-    flowsource/playwright-report-filename: XML_Report_GLO_DE_Complete.json
-    flowsource/playwright-report-path: "playwright_flowsource/"
-    flowsource/playwright-cloud-provider: AZURE
-    # flowsource/veracode-app-name: dummy
-    # blackduck/project: automation-center-messageinterface/ver.1
-    # flowsource/fis-aws-region: us-east-2
-    # flowsource/aws-resiliencehub-appname: demotest
-    # flowsource/aws-resiliencehub-region: us-east-2
-    # backstage.io/kubernetes-id: flowsource
-    # backstage.io/kubernetes-namespace: flwdemo
-    # endoflife.date/products: nodejs@18,react@17,python,kubernetes,postgresql
   tags:
     - payment
     - transcation
