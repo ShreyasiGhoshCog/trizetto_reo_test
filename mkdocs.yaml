@@ -1,0 +1,22 @@
+site_name: Flowsource-User-Guide
+site_description: Flowsource Demo Component Documentation
+
+nav:
+  - Introduction: index.md
+  - AWS Installation and Deployment Guide: FlowSource_AWS_Deployment_Guide.md
+  - Cognizant Flowsource User Guide: flowsource-user-guide-icons.md
+
+
+plugins:
+  - techdocs-core
+
+markdown_extensions:
+  - toc:
+      toc_depth: 5
+      permalink: true
+
+extra_css:
+  - assets/toc-collapse.css
+
+extra_javascript:
+  - assets/toc-collapse.js
