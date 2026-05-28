@@ -1,3 +1,4 @@
+# make the structure how the docs should aline 
 site_name: Online-Payment-App
 docs_dir: docs
 plugins:
