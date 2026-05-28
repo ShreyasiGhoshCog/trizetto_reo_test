@@ -1,14 +1,7 @@
-site_name: Flowsource-Trizetto
-site_description: Flowsource Demo Component Documentation
-docs_dir: .
-nav:
-  - Introduction: index.md
+site_name: Online-Payment-App
+docs_dir: docs
 plugins:
   - techdocs-core
-markdown_extensions:
-  - toc:
-      toc_depth: 5
-      permalink: true
-extra_css:
-  - assets/toc-collapse.css
-extra_javascript:
+nav:
+  - Home: index.md
+  - User Guide: user-guide.md
