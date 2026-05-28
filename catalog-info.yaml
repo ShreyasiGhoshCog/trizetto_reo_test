@@ -19,7 +19,7 @@ metadata:
     flowsource/github-repo-owner: ShreyasiGhoshCog
     flowsource/github-repo-name: trizetto_reo_test
     flowsource/azure-devops-project-key: SPE - Flowsource-Implementation
-    backstage.io/techdocs-ref: dir:.
+    backstage.io/techdocs-ref: url:https://github.com/ShreyasiGhoshCog/trizetto_reo_test/tree/main
     # cognizant/checkmarx-project-id: CAC_automationenginewindows_v4.3.1-latest
     # flowsource/sonarqube-project-key: 
     # flowsource/azure-pipelines: Infra_Automation
