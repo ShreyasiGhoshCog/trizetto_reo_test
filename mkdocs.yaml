@@ -4,4 +4,4 @@ plugins:
   - techdocs-core
 nav:
   - Home: index.md
-  - User Guide: user-guide.md
+  - User Guide: UserGuide.md
