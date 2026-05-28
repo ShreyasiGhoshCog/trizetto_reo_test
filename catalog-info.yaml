@@ -17,7 +17,7 @@ metadata:
     flowsource/github-workflows: TicketBooking-Pipeline1
     flowsource/durationInDays: '180'
     flowsource/github-repo-owner: ShreyasiGhoshCog
-    flowsource/github-repo-name: Test_repo,trizetto_reo_test
+    flowsource/github-repo-name: trizetto_reo_test
     flowsource/azure-devops-project-key: SPE - Flowsource-Implementation
     backstage.io/techdocs-ref: dir:.
     # cognizant/checkmarx-project-id: CAC_automationenginewindows_v4.3.1-latest
