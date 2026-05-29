@@ -16,7 +16,7 @@ metadata:
     github.com/project-slug: Auerbach, Brian/tps-app-file-manager
     flowsource/github-repo-owner: Auerbach, Brian
     flowsource/github-repo-name: tps-app-file-manager
-    flowsource/azure-devops-project-key:  SPE - Flowsource-Implementation
+    flowsource/azure-devops-project-key:  TPS
     backstage.io/techdocs-ref: url:
  
   tags:
