@@ -13,11 +13,11 @@ metadata:
     - title: Blackduck Website
       url: https://github.com/deepan10/backstage-plugin-blackduck  
   annotations:
-    github.com/project-slug: ShreyasiGhoshCog/Test_repo
-    flowsource/github-repo-owner: ShreyasiGhoshCog
-    flowsource/github-repo-name: trizetto_reo_test
-    flowsource/azure-devops-project-key: SPE - Flowsource-Implementation
-    backstage.io/techdocs-ref: url:https://github.com/ShreyasiGhoshCog/trizetto_reo_test/tree/main
+    github.com/project-slug: Auerbach, Brian/tps-app-file-manager
+    flowsource/github-repo-owner: Auerbach, Brian
+    flowsource/github-repo-name: tps-app-file-manager
+    flowsource/azure-devops-project-key: TPS
+    backstage.io/techdocs-ref: url:
  
   tags:
     - payment
@@ -34,13 +34,13 @@ spec:
 apiVersion: backstage.io/v1alpha1
 kind: API
 metadata:
-  name: spe-api
-  description: Retrieve artist details
+  name: TriZetto-API
+  description: Retrieve API details
 spec:
   type: openapi
   lifecycle: production
-  owner: artist-relations-team
-  system: artist-engagement-portal
+  owner: TriZetto-relations-team
+  system: Trizetto-engagement-portal
   definition: |
     openapi: "3.0.0"
     info:
