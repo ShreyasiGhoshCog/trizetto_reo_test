@@ -28,7 +28,7 @@ spec:
   owner: group:default-group
   lifecycle: Development
   providesApis:
-    - spe-api
+    - Trizetto-api
 
 ---
 apiVersion: backstage.io/v1alpha1
