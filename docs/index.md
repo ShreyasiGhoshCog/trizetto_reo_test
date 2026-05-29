@@ -1,14 +1,24 @@
-# Trizetto App — Documentation
+# Flowsource Demo
 
-Welcome to the official documentation for the **Online Payment App**.
+## Overview
 
-> ⚠️ This documentation is a placeholder. Final content will be updated shortly.
+The customer authorises payment via an online form allowing the business to automatically collect the funds when due. The business' bank and the customer's bank communicate and action the payment request when the payment is due, ensuring the correct amount is debited from the customer and credited to the business.
 
-## Sections
+## Component Details
 
+- **Owner:** default-group
+- **Lifecycle:** Development
+- **Type:** Service
+- **System:** flowsource-demo
 
-- [User Guide](user-guide.md)
+## Features
 
-## Contact
+- Payment processing via online forms
+- Automated fund collection
+- Bank-to-bank communication
+- Debit and credit management
 
-For queries, reach out to the platform team.
+## Links
+
+- [Backstage Documentation](https://backstage.io/docs)
+- [Backstage Website](https://backstage.io/)
